@@ -1,7 +1,7 @@
 import { AsyncScope } from "./async_scope";
 
 export class AsyncVar<T> {
-  private readonly symbol = Symbol(this.name);
+  private readonly symbol = Symbol.for(this.name);
 
   constructor(readonly name: string) {}
 
